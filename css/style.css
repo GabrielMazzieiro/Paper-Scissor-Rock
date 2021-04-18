@@ -242,6 +242,15 @@ h2 {
   transition: 1s ease-out;
 }
 
+#house-pick.reset {
+  opacity: 0;
+  transition: none;
+}
+#your-pick.reset {
+  opacity: 0;
+  transition: none;
+}
+
 /****************************************** Images *******************************/
 
 .img {
@@ -262,35 +271,35 @@ h2 {
   bottom: 200px;
 }
 
-
 /************************** Game Result  ***********************/
 
 #game-result p {
-display: inline;
-position: relative;
-left: 35rem;
-bottom: 87rem;
-font-size: 3rem;
-font-weight: 700;
-
-
+  display: inline;
+  position: relative;
+  left: 35rem;
+  bottom: 87rem;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
-.play-again{
-  color:red;
+.play-again {
+  color: red;
   padding: 7px 50px 7px 50px;
   font-size: 1rem;
   font-weight: 600;
   position: relative;
-  left: 24rem;
+  left: 23.4rem;
   bottom: 84rem;
 }
 
-#game-result.hide{
-  opacity:0;
-  transition: 0.5s ease-in
+#game-result.hide {
+  opacity: 0;
+  transition: 0.5s ease-in;
 }
 
+.reset {
+  opacity: 0;
+}
 /************* rule img  ****************/
 
 #rules-bg {
@@ -311,7 +320,6 @@ font-weight: 700;
   display: inline;
   margin-bottom: 2.5rem;
   position: relative;
-  
 }
 
 .btn-close {
@@ -666,7 +674,6 @@ font-weight: 700;
 
 /********************************************* House Choice  ************************************************/
 
-
 /* Rock  */
 
 .rock.house-choice {
@@ -679,9 +686,7 @@ font-weight: 700;
     rgb(224, 224, 224),
     white 110px
   );
-  
-  
-}  
+}
 
 .rock.house-choice::before {
   background-image: repeating-radial-gradient(
@@ -689,7 +694,6 @@ font-weight: 700;
     hsl(349, 67%, 43%),
     hsl(349, 70%, 56%) 140px
   );
-  
 }
 
 .rock.house-choice img {
@@ -699,12 +703,9 @@ font-weight: 700;
   position: relative;
   top: 35px;
   width: 100px;
-  
 }
 
-
-
-.rock.house-choice.end-game{
+.rock.house-choice.end-game {
   left: 925px;
   bottom: 1260px;
   width: 220px;
@@ -715,11 +716,9 @@ font-weight: 700;
     white 110px
   );
   transition: 1s ease-out;
-  
-}  
+}
 
 /* Scissor  */
-
 
 .scissors.house-choice {
   left: 727px;
@@ -731,7 +730,6 @@ font-weight: 700;
     rgb(224, 224, 224),
     white 110px
   );
-
 }
 
 .scissors.house-choice::before {
@@ -750,10 +748,9 @@ font-weight: 700;
   position: relative;
   top: 25px;
   width: 100px;
-  
 }
 
-.scissors.house-choice.end-game{
+.scissors.house-choice.end-game {
   left: 927px;
   bottom: 1140px;
   width: 220px;
@@ -765,15 +762,9 @@ font-weight: 700;
   );
 
   transition: 1s ease-out;
-
 }
 
-
-
-
-
 /* Paper  */
-
 
 .paper.house-choice {
   left: 725px;
@@ -785,8 +776,6 @@ font-weight: 700;
     rgb(224, 224, 224),
     white 110px
   );
-
-  
 }
 
 .paper.house-choice::before {
@@ -795,7 +784,6 @@ font-weight: 700;
     hsl(230, 67%, 53%),
     hsl(230, 89%, 65%) 140px
   );
-  
 }
 
 .paper.house-choice img {
@@ -805,10 +793,9 @@ font-weight: 700;
   position: relative;
   top: 25px;
   width: 100px;
-  
 }
 
-.paper.house-choice.end-game{
+.paper.house-choice.end-game {
   left: 925px;
   bottom: 1020px;
   width: 220px;
@@ -820,6 +807,4 @@ font-weight: 700;
   );
 
   transition: 1s ease-out;
-
-  
 }
