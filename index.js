@@ -28,17 +28,20 @@ $(".btn-close").click(() => {
   $("#rules-bg").css("display", "none");
 });
 
+// Make computer choice appear
 function houseCircle() {
   $("#" + houseChoice + "-chosen")
     .removeClass("hide")
     .addClass("house-choice");
 }
 
+// Make header & wait-circle appear
 function notChosen() {
   $("h2").removeClass("hide");
   $("#wait-circle").removeClass("hide");
 }
 
+// Change final Text & add Score if win
 function handleWin() {
   $("#final").text("you win!");
   score++;
@@ -55,6 +58,7 @@ function handleTie() {
   $("#final").text("it's a tie!");
 }
 
+// Animation timers
 function animation(choiceID) {
   setTimeout(() => {
     notChosen();
@@ -74,6 +78,7 @@ function animation(choiceID) {
   }, outerTimeOut);
 }
 
+// Reset game to start over
 function restartAnimation() {
   $("#" + houseChoice + "-chosen")
     .addClass("hide")
@@ -141,27 +146,23 @@ function initGame() {
             handleWin();
             break;
         }
-
         // Esconder as opções não escolhidas
         scissors.addClass("hide");
         rock.addClass("hide");
         triangle.addClass("hide");
         paper.addClass("chosen");
-
         // começar a animação das opções não escolhidas
         animation(paper);
-
         break;
+
       case scissorsID:
         // Esconder as opções não escolhidas
         paper.addClass("hide");
         rock.addClass("hide");
         triangle.addClass("hide");
         scissors.addClass("chosen");
-
         // começar a animação das opções não escolhidas
         animation(scissors);
-
         // Regras do jogo para a opção escolhida
         switch (houseChoice) {
           case "scissors":
@@ -169,13 +170,11 @@ function initGame() {
             break;
           case "paper":
             handleWin();
-
             break;
           case "rock":
             handleLoss();
             break;
         }
-
         break;
 
       case rockID:
@@ -184,25 +183,23 @@ function initGame() {
         scissors.addClass("hide");
         triangle.addClass("hide");
         rock.addClass("chosen");
-
         // começar a animação das opções não escolhidas
         animation(rock);
         // Regras do jogo para a opção escolhida
         switch (houseChoice) {
           case "scissors":
-            handleLoss();
+            handleWin();
             break;
           case "paper":
-            handleWin();
-
+            handleLoss();
             break;
           case "rock":
             handleTie();
             break;
         }
-
         break;
     }
   });
 }
+
 initGame();
